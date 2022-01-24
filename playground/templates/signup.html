@@ -1,0 +1,35 @@
+<!-- Button to open the modal --
+
+  
+<!-- The Modal (contains the Sign Up form) -->
+
+
+
+{% block content %}
+
+
+{% load crispy_forms_tags %}         
+
+<div id="id01" class="modal">
+
+  
+  
+
+
+    <div class="container py-5">
+
+
+      
+<div class="container py-5">
+	<h1>Register</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ register_form|crispy }}  
+    {% include 'messages.html' %}                  
+		<button class="btn btn-primary" type="submit">SignUp</button>
+	</form>
+	<p class="text-center">If you already have an account, <a href="/playground/welcome">login</a> instead.</p>
+</div>
+
+{% endblock %}
+     
