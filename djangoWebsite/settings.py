@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^6a5w!1xoqmwy#4!2k9(wc%2&rzbe35#@*#m4gv&w#c1q@qaus
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.mcodeintern.com' , 'mcodeintern.com']
+ALLOWED_HOSTS = ['www.mcodeintern.com' , 'mcodeintern.com' , ' 127.0.0.1']
 
 
 # Application definition
@@ -119,7 +119,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'playground/static/playground/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -127,5 +127,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'playground/static/playground'),
 ]
