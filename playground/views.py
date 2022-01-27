@@ -16,7 +16,7 @@ def home_view(request):
         if form.is_valid(): 
             username = form.cleaned_data.get('username') #stores username as dictionary with user input as value 
             password = form.cleaned_data.get('password') #same as above
-            user = authenticate(username=username , password=password) # django user authentication method
+            user = authenticate(username=username  , password=password) # django user authentication method
             if user is not None: # if the user was authenticated.
                 login(request, user) #keeps  user logged in throughout session.
                 messages.info(request, f"You are now logged in as {username}.")
@@ -26,7 +26,7 @@ def home_view(request):
         else:
             messages.error(request, "Invalid username or password.")
     form = AuthenticationForm()
-    return render(request = request, template_name= "welcome.html", context = {"login_form": form})
+    return render(request = request, template_name= "welcome.html", context = {"login_form": form}) # context enables use of crispy forms (less HTML writing)
     
 
 
